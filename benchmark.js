@@ -12,5 +12,10 @@ function testFn(fn, input, name='function') {
 
 console.log('\n----- RUNNING ------\n');
 
-testFn(jsExample, [ 10 ], 'Running with JS');
-testFn(cppExample, [ 10 ], 'Running with CPP');
+let inputs= [ 10, 20, 30, 40, 45 ];
+
+inputs.forEach(inp => {
+	testFn(jsExample, [ inp ], 'Running with JS');
+	testFn(cppExample, [ inp ], 'Running with CPP');
+	console.log(' ');
+});

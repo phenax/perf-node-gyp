@@ -1,7 +1,6 @@
 
 #include <node.h>
 #include <v8.h>
-#include <iostream>
 #include <string>
 
 
@@ -22,8 +21,6 @@ void FiboHandler(const v8::FunctionCallbackInfo<v8::Value>& args) {
 	int out= fibonacci(std::stoi(*str));
 
 	std::string ouput= std::to_string(out); 
-
-	std::cout << ouput << std::endl;
 
 	v8::Local<v8::Object> obj = v8::Object::New(isolate);
 	obj->Set(v8::String::NewFromUtf8(isolate, "result"), v8::String::NewFromUtf8(isolate, ouput.c_str()));
