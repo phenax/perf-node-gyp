@@ -21,10 +21,12 @@ void FiboHandler(const v8::FunctionCallbackInfo<v8::Value>& args) {
 
 	int out= fibonacci(std::stoi(*str));
 
-	std::cout << out << std::endl;
+	std::string ouput= std::to_string(out); 
+
+	std::cout << ouput << std::endl;
 
 	v8::Local<v8::Object> obj = v8::Object::New(isolate);
-	obj->Set(v8::String::NewFromUtf8(isolate, "result"), args[0]->ToString()); //v8::Integer::New(out));
+	obj->Set(v8::String::NewFromUtf8(isolate, "result"), v8::String::NewFromUtf8(isolate, ouput.c_str()));
 
 	args.GetReturnValue().Set(obj);
 }
