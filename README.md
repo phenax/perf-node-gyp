@@ -1,4 +1,6 @@
 # Performance Benchmark Node-GYP
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/phenax/perf-node-gyp.svg)](https://greenkeeper.io/)
 Performance benchmark for a simple Fibonacci algorithm for node and node with c++(with node-gyp)
 
 ### Instructions
